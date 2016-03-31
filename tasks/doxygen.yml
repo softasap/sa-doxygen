@@ -56,7 +56,7 @@
     tags: doxygen
 
   - name: DOXYGEN | clean build dir
-    file: path="{{apps_dir}}/doxygen-{{doxygen_version}}" state=ansent
+    file: path="{{apps_dir}}/doxygen-{{doxygen_version}}" state=absent
     when: doxygen_present|failed
     tags: doxygen
 
