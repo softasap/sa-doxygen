@@ -1,0 +1,3 @@
+---
+# tasks file for sa-doxygen
+  - include: doxygen.yml

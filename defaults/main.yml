@@ -1,0 +1,8 @@
+---
+# defaults file for sa-dev-intellij
+
+root_dir: "{{role_path}}"
+deploy_user: "{{ansible_user_id}}"
+apps_dir: "/tmp"
+
+doxygen_version: 1.8.11
