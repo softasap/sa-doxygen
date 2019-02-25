@@ -20,7 +20,7 @@
     tags: doxygen
 
   - name: DOXYGEN | Download doxygen distribution
-    get_url: url="http://ftp.stack.nl/pub/users/dimitri/doxygen-{{doxygen_version}}.src.tar.gz"
+    get_url: url="http://doxygen.nl/files/doxygen-{{doxygen_version}}.src.tar.gz"
              dest="{{apps_dir}}/doxygen.tar.gz"
     when: doxygen_present|failed
     tags: doxygen
