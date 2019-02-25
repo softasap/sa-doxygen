@@ -39,14 +39,18 @@
     args:
       chdir: "{{ apps_dir }}/doxygen-{{ doxygen_version }}"
     when: doxygen_present is failed
-    tags: doxygen
+    tags: 
+      -doxygen
+      -skip_ansible_lint      
 
   - name: DOXYGEN | build step 2
     shell: cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -Dbuild_wizard=ON -DCMAKE_INSTALL_PREFIX=/usr ..
     args:
       chdir: "{{ apps_dir }}/doxygen-{{ doxygen_version }}/build"
     when: doxygen_present is failed
-    tags: doxygen
+    tags: 
+      -doxygen
+      -skip_ansible_lint      
 
   - name: DOXYGEN | build step 3
     shell: make install
@@ -54,7 +58,9 @@
       chdir: "{{ apps_dir }}/doxygen-{{ doxygen_version }}/build"
     become: yes
     when: doxygen_present is failed
-    tags: doxygen
+    tags: 
+      -doxygen
+      -skip_ansible_lint      
 
   - name: DOXYGEN | clean build dir
     file: path="{{ apps_dir }}/doxygen-{{ doxygen_version }}" state=absent
