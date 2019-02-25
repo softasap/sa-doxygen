@@ -1,0 +1,3 @@
+[submodule "roles/sa-doxygen"]
+        path = roles/sa-doxygen
+        url = https://github.com/softasap/sa-doxygen.git
